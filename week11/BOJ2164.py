@@ -16,14 +16,5 @@ n = int(input())
 # print(a - 2*(a - n))
 # -------------------------
 
-# a = 2**(math.ceil(math.log2(n)))
-
-def next_power_of_two(n):
-    if n <= 0:
-        return 1
-    if n & (n - 1) == 0:
-        return n  # 이미 2의 거듭제곱이면 그대로
-    return 1 << n.bit_length()
-
-a = next_power_of_two(n)
+a = 2**(math.ceil(math.log2(n)))
 print(2*n - a)
